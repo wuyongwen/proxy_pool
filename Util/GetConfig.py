@@ -46,6 +46,14 @@ class GetConfig(object):
         return int(self.config_file.get('DB', 'port'))
 
     @LazyProperty
+    def db_db(self):
+        return self.config_file.get('DB', 'db')
+
+    @LazyProperty
+    def db_password(self):
+        return self.config_file.get('DB', 'password')
+
+    @LazyProperty
     def proxy_getter_functions(self):
         return self.config_file.options('ProxyGetter')
 

@@ -22,7 +22,7 @@ class RedisClient(object):
     Reids client
     """
 
-    def __init__(self, name, host, port):
+    def __init__(self, name, host, port, db, password):
         """
         init
         :param name:

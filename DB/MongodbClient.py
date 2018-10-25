@@ -17,7 +17,7 @@ from pymongo import MongoClient
 
 
 class MongodbClient(object):
-    def __init__(self, name, host, port):
+    def __init__(self, name, host, port, db, password):
         self.name = name
         self.client = MongoClient(host, port)
         self.db = self.client.proxy
